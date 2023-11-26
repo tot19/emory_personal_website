@@ -1,11 +1,33 @@
-header {
-    background-color: #f8f9fa;
-    padding: 10px;
+.panel {
+    padding: 100px;
     text-align: center;
 }
 
-header a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
+/* Simple styling for panels */
+#home {
+    background-color: #fff;
+}
+
+#about {
+    background-color: #e9ecef;
+}
+
+#projects {
+    background-color: #dee2e6;
+}
+
+#contact {
+    background-color: #ced4da;
+}
+
+/* Add some transitions for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.welcome-banner {
+    width: 40%; /* Adjust this value based on your layout needs */
+    height: auto;
+    display: block; /* To ensure it centers in the parent element */
+    margin: auto; /* Center the image */
 }
