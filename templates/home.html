@@ -9,39 +9,77 @@
 <body>
   <header>
     <div class="header-logo">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+      <a href="https://emoryotott.com" rel="noopener noreferrer">
+        <img src="{{ url_for("static", filename="logo.png") }}" alt="Logo">
+      </a>
     </div>
+    
     <div class="header-button">
       <a href="https://github.com/tot19" target="_blank" rel="noopener noreferrer">
-        <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
+        <img src="{{ url_for("static", filename="github.png") }}" alt="GitHub">
       </a>
       <a href="https://www.linkedin.com/in/emoryotott" target="_blank" rel="noopener noreferrer">
-        <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
+        <img src="{{ url_for("static", filename="linkedin.png") }}" alt="LinkedIn">
       </a>
-        <a href="{{ url_for('contact') }}" class="contact-button">Contact Me</a>
+        <a href="{{ url_for("contact") }}" class="contact-button">Get In Touch</a>
     </div>
   </header>
-  <h1 class="welcome-header">Welcome to my website!</h1>
-  <p class="welcome-paragraph">My name is Emory Otott, and I am a DevOps Engineer. I specialize in delivering automation solutions with Python and Ansible.</p>
-  <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Welcome Banner" class="welcome-image">
-  <div id="about" class="panel" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>This is the about me panel.</p>
+  
+  <div id="welcome" class="panel" data-aos="fade-up">
+    <h1 class="welcome-header">Welcome to my website!</h1>
+    <p class="welcome-paragraph">My name is Emory Otott, and I am a DevOps Engineer. I specialize in delivering automation solutions with Python and Ansible. Additionally, I have experience implementing and managing HashiCorp Vault.</p>
+    <img src="{{ url_for("static", filename="icon.jpg") }}" alt="Welcome Banner" class="welcome-image">
   </div>
 
-  <div id="projects" class="panel" data-aos="fade-left">
-    <h2>Skills</h2>
-    <p>This is the skills panel.</p>
+  <div id="about" class="panel" data-aos="fade-up">
+    <h1 class="about-me-header">About Me</h1>
+    <p class="about-me-paragraph">I am based in the greater Tokyo Area and have been a DevOps Engineer for <span>{{ years_exp }}</span> years. I thoroughly enjoy delivering automation solutions that free up engineers from toil to allow them to focus on the parts of their job that excite them. I am a certified Red Hat Systems Administrator and Azure Solutions Architect. I possess intermediate proficiency in written and spoken Japanese. I enjoy traveling, eating new foods, and spending quality time with my wife and 2 cats.</p>
+  </div>
+
+  <div id="skills" class="panel" data-aos="fade-left">
+    <h1 class="skills-header">Tools of the Trade</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="{{ url_for("static", filename="python.png") }}" alt="Python">
+      </div>
+      
+      <div class="card">
+        <img src="{{ url_for("static", filename="vault.png") }}" alt="Vault">
+      </div>
+      
+      <div class="card">
+        <img src="{{ url_for("static", filename="ansible.png") }}" alt="Ansible">
+      </div>
+    </div>
+    
   </div>
 
   <div id="contact" class="panel" data-aos="fade-right">
-    <h2>Contact</h2>
-    <p>This is the contact panel.</p>
+    <h1 class="contact-header">Reach Out</h1>
+    <p class="contact-paragraph">Let's build something amazing together!</p>
+    <a href="{{ url_for("contact") }}" class="contact-large-button">Get In Touch</a>
   </div>
 
-  <!-- Your content here -->
-  <!-- Add Bootstrap JS and its dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script src="static/script.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="https://emoryotott.com" rel="noopener noreferrer">
+          <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </a>
+      </div>
+      <div class="footer-social-links">
+        <a href="https://github.com/tot19" target="_blank" rel="noopener noreferrer">
+          <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/emoryotott" target="_blank" rel="noopener noreferrer">
+          <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+  
 </body>
 </html>
