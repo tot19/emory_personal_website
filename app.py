@@ -18,10 +18,5 @@ def home():
     return render_template("home.html", years_exp=years_exp)
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
