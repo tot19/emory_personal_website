@@ -1,3 +1,78 @@
+@font-face {
+    font-family: Arial, sans-serif;
+}
+
+/* Use the font in your styles */
+body {
+    font-family: 'Your Chosen Font', sans-serif;
+    color: #9231f3;
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.header-logo img {
+    width: 200px; /* Adjust the logo size as needed */
+}
+
+.header-button .contact-button {
+    background-color: #fff;
+    color: #9231f3; /* Text color when not hovered */
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #9231f3; /* Border properties */
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Links styles */
+.header-button a {
+    text-decoration: none;
+    margin-right: 20px; /* Add spacing between links */
+}
+
+.header-button img {
+    width: 30px; /* Adjust the image size as needed */
+    vertical-align: middle;
+}
+
+.header-button .contact-button:hover {
+    background-color: #9231f3; /* Background color when hovered */
+    color: #fff; /* Text color when hovered */
+}
+
+.welcome-image {
+    width: 25%; /* Adjust this value based on your layout needs */
+    height: auto;
+    display: block; /* To ensure it centers in the parent element */
+    margin: auto; /* Center the image */
+}
+
+.welcome-header, .welcome-paragraph {
+    margin-left: 20%; /* Adds space outside the element on the left */
+    margin-right: 20%; /* Adds space outside the element on the right */
+    color: #141C3A;
+}
+
+.welcome-header {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.welcome-paragraph {
+    text-align: center;
+    font-size: 1.5em;
+}
+
 .panel {
     padding: 100px;
     text-align: center;
@@ -23,11 +98,4 @@
 /* Add some transitions for smooth scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-.welcome-banner {
-    width: 40%; /* Adjust this value based on your layout needs */
-    height: auto;
-    display: block; /* To ensure it centers in the parent element */
-    margin: auto; /* Center the image */
 }

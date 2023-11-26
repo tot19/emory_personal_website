@@ -7,8 +7,23 @@
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Welcome Banner" class="welcome-banner">
-
+  <header>
+    <div class="header-logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </div>
+    <div class="header-button">
+      <a href="https://github.com/tot19" target="_blank" rel="noopener noreferrer">
+        <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/emoryotott" target="_blank" rel="noopener noreferrer">
+        <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
+      </a>
+        <a href="{{ url_for('contact') }}" class="contact-button">Contact Me</a>
+    </div>
+  </header>
+  <h1 class="welcome-header">Welcome to my website!</h1>
+  <p class="welcome-paragraph">My name is Emory Otott, and I am a DevOps Engineer. I specialize in delivering automation solutions with Python and Ansible.</p>
+  <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Welcome Banner" class="welcome-image">
   <div id="about" class="panel" data-aos="fade-up">
     <h2>About Me</h2>
     <p>This is the about me panel.</p>
